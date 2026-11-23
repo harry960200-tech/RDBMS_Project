@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "emergency-room-patient-triage-system",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "er-triage-db",
+      "database_id": "9b957ec7-2d81-4f01-884f-dd15d3c4cbf4",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "BETTER_AUTH_URL": "https://emergency-room-patient-triage-system.auroravane-official.workers.dev",
+    "APP_URL": "https://emergency-room-patient-triage-system.auroravane-official.workers.dev"
+  }
+}
